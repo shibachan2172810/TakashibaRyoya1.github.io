@@ -1,0 +1,332 @@
+html,body {
+  height: 100%
+}
+
+body:after{/*擬似要素をつくる*/
+ 
+  position: fixed;/*固定配置*/
+  top: 0;left: 0;
+  width: 100%; height: 100%;/*画面全体を覆う*/
+  content: "";
+  /*background: -moz-linear-gradient(top, #FFC778 0%,#f89174 100%);/*古いFireFox向け*/*/
+  /*background: -webkit-linear-gradient(top, #FFC778 0%,#f89174 100%);古いSafari・Chrome向け*/
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbcacb', endColorstr='#f79697',GradientType=0 );/*IE9以下への対応*/
+  background: linear-gradient(to bottom, #0000ff 0%, #191970 100%);/*正規のプロパティ*/*/
+  z-index: -1;/*背景にするため*/
+ 
+  }
+
+.wel{
+  animation: fadeIn 5s;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform : translate(-50%,-50%);
+  z-index: 1;
+}
+.con{
+  position: absolute;
+  left: 50%;
+  top: 140%;
+  -webkit-transform : translate(-50%,-50%);
+  z-index: 1;
+  
+  
+}
+.workA{
+  position: absolute;
+  left: 50%;
+  top: 220%;
+  -webkit-transform : translate(-50%,-50%);
+  z-index: 1;
+}
+a{
+  text-align: center;
+  color: white;
+  font-family: 'Century',serif;
+  font-size: 24px;
+
+}
+.hover-red:hover {
+    color: yellow;
+}
+.title{
+  font-family: 'Century',serif;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+ 
+
+  
+}
+.title-shadow{
+  position: relative;
+  top: -36px;
+  font-family: 'Century',serif;
+  background: linear-gradient( to top,  rgba(255,255,255,0.9) 0%, rgba(102,51,153,0) 80% );
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 36px;
+  -webkit-transform: rotateX(180deg);
+
+}
+
+.nor{
+  text-align: center;
+  color: white;
+  font-family: 'Century',serif;
+  font-size: 24px;
+}
+
+@use postcss-cssnext;
+/* helpers/accessibility.css */
+
+.invisible {
+  left: -999px;
+  overflow: hidden;
+  position: absolute;
+  top: -999px;
+}
+
+/* helpers/align.css */
+
+.align {
+  
+  position: absolute;
+  left: 50%;
+  margin-top: 20%;
+  -webkit-transform : translate(-50%,-50%);
+
+
+}
+
+/* layout/base.css */
+
+:root {
+  --body-background-color: #82a8ee;
+}
+
+
+
+/* modules/anchor.css */
+
+a {
+  outline: 0;
+}
+
+/* modules/icon.css */
+
+:root {
+  --icon-fill-color: #97adc6;
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  display: inline-block;
+  fill: var(--icon-fill-color);
+  font-size: 1rem;
+  height: 1em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.icon--2x {
+  font-size: 2rem;
+}
+
+/* modules/image.css */
+
+svg {
+  max-width: 100%;
+}
+
+/* modules/navigation.css */
+
+:root {
+  --navigation-background-color: #f0f6ff;
+  --navigation-border-radius: 0.25rem;
+
+  --navigation-anchor-padding: 1.5rem;
+  --navigation-anchor-text-decoration: none;
+}
+
+.navigation {
+  background-color: #f0f6ff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  padding: 1.5rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.navigation a:focus::after,
+.navigation a:hover::after {
+  opacity: 1;
+}
+
+.navigation a::after {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+
+.navigation--inline ul {
+  display: flex;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0.0;
+  }
+  100%{
+    opacity: 1.0;
+  }
+}
+
+.pyonpyon span {
+    animation: pyon 0.3s linear;
+    position: relative;
+}
+
+@keyframes pyon {
+    0% {top: 0}
+    50% {top:-17px}
+    100%{top: 0}
+}
+
+.pic:hover {     position: relative;     text-decoration: none; } 
+.pic span {     display: none;     position: absolute;     top: 1em;     left: 0; } a.p:hover span {    border: none;     display: block;   margin-top: 0px;
+margin-bottom: 0px; margin-right: 0px; margin-left: 0px ;  width: 300px;    }
+
+
+/*@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+#Button {
+  position: absolute; top: 15px; left: 15px;
+  width: 60px; height: 60px;
+  font-size: 18px; 
+  text-align: center; 
+  line-height: 60px; 
+  background: #e74c3c;
+  color: #ececec;
+  cursor: pointer;
+  z-index: 1;
+  font-family: 'Century',serif;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
+.Nav {
+  position: absolute; 
+  margin: auto; 
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 302px; height: 302px;
+  font-size: 0;
+  transform: scale(0);
+  transition: transform 0.8s;
+  box-shadow: 0px 0px 10px #999;
+  z-index: 1;
+}
+
+.men {
+  display: inline-block;
+  width: 150px; height: 150px;
+  font-size: 28px; 
+  text-decoration: none; 
+  line-height: 150px; 
+  text-align: center;
+  text-shadow: 2px 2px 4px #666; 
+  color: #fff;
+}
+
+.men:nth-of-type(odd) { margin-right: 2px; }
+.men:nth-child(1) { margin-bottom: 2px; background: #1abc9c; }
+.men:nth-child(2) { background: #2ecc71; }
+.men:nth-child(3) { background: #3498db; }
+.men:nth-child(4) { background: #9b59b6; }
+
+.active {
+  transform: scale(1);
+}
+
+canvas { position: absolute; }
+*/
+.works{
+
+  position: absolute;
+  left: 50%;
+  top: 230%;
+  -webkit-transform : translate(-50%,-50%);
+  z-index: 1;
+
+}
+.works_name{
+  color: white;
+  font-family: 'Century',serif;
+  font-size: 30px;
+}
+
+.slideInLists{
+  padding: 0;
+}
+
+
+.slideInItem{
+  transform: translate(-100vw,0);
+  transition: all 1s;
+  list-style: none;
+  width: 100vw;
+  height: 100px;
+  background-color: rgba(0,0,0,0.5);
+  border: solid 1px orangered;
+  margin-bottom: 10px;
+}
+
+
+.slideInLink{
+  display: block;
+  height: 100%;
+}
+.slideInLink:hover{
+  background-color: white;
+  opacity: 0.4;
+}
+.pl{
+/*  top: 0;*/
+  font-family: 'Century',serif;
+}
+
+
+/*:root{
+    --maingreen: #419e9d;
+  }
+  これやると color: var(--maingray);で通るし一遍に色変えれるから地味に便利*/
+ 
